@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+	margin: 2em;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+#contact{
+    background-color: orange;
+}
+#home{
+    background-color: yellow;
+}
+#about{
+    background-color: greenyellow;
+}
+#foodMenu{
+    background-color: cornflowerblue;
+}
+#menu{
+    background-color: grey;
+}
+/* FUEGO AERGENTINO */
+h1 {
+    font-size: medium;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a:link {
+    text-decoration:none;
+}
+
+/****** navBar *****/
+.desktopBar {
+    display: none;
+}
+
+.desktop {
+    display:none;
+}
+
+.navbar {
+    position: relative;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.logoImg {
+    width: 30px;
+}
+
+.hambImg {
+    width: 20px;
+    margin-bottom: 0px;
+}
+
+.rotateImg {
+    width: 30px;
+    margin-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.closeImg {
+    width: 30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.logo {
+    position: absolute;
+    left: calc(50% - 15px);
+}
+
+.hamburger {
+    position: absolute;
+    right:0%;
+}
+
+.rotate {
+    display: flex;
+    justify-content: center;
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* *************************** */
+
+.containerSinFooter {
+    min-height: calc(100vh - 100px - 100px);
+}
+
+.menu{
+    list-style: none;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    text-align: center;
+    min-height: 90%;
+}
+
+/* posiciono en el centro de la pagina */
+.centeredContainer {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/****** footer *****/
+
+.redes {
+    visibility: hidden;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    font-size: small;
+    /* padding-left: 0px; */
+    /* list-style: none; */
+    /* margin: 0; */
+    margin-top: 20px;
+}
+
+/* .noLeading p {
+    padding: 0px;
+    margin: 0px;
+} */
+
+
+/****** scroll poesia Kun*****/
+
+/* Establecer posición inicial del texto y crear animacion*/
+#scrollText {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    animation: miAnimacion 20s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
+}
+
+.scrollContainer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+	width: 100%;
+    min-height: calc(80vh - 100px - 100px);
+	overflow: scroll;
+	margin: 0 auto;
+    overflow-x:hidden;
+    scrollbar-color: yellow #800080;
+    scrollbar-width: 10px;
+}
+
+/* Crear animación */
+@keyframes miAnimacion {
+    from {
+        transform: translateY(90%);
+    }
+    to {
+        transform: translateY(-70%);
+    }
+}
+
+
+/* *** desktop layout  *** */
+@media only screen and (min-width:480px) {
+
+    .mobile {
+        display: none;
+    }
+    
+    .desktopBar {
+        display:flex;
+        justify-content: center;
+    }
+
+    .redes {
+        visibility: visible;
+        margin: 0 20px 0 20px;
+    }
+
+    .bottomfooter{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+    .desktopBar ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    .barmenu{
+        margin-bottom: 20px;
+        /* padding-left: 0px;
+        min-height: 100%; */
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+
+
