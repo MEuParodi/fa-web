@@ -36,6 +36,10 @@ a:link {
     text-decoration:none;
 }
 
+/* a:visited {
+    color: black;
+} */
+
 /****** navBar *****/
 .desktopBar {
     display: none;
