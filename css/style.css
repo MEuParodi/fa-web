@@ -5,44 +5,85 @@
 }
 
 body {
-	margin: 2em;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	text-align: center;
+    color: white;
+    /* border: 5px solid red; */
+    min-height: 100vh; 
+    padding: 1em;
+    overflow-y: hidden;
+}
+
+@font-face {
+    font-family: spacegrotesk-variablefont_wght_1;
+    src: url("/fonts/spacegrotesk-variablefont_wght_1.TTF");
+}
+@font-face {
+    font-family: spacegrotesk-variablefont_wght_2;
+    src: url("/fonts/spacegrotesk-variablefont_wght_2.ttf");
+}
+@font-face {
+    font-family: spacegrotesk-variablefont_wght;
+    src: url("/fonts/spacegrotesk-variablefont_wght.ttf");
+}
+@font-face {
+    font-family: spacegrotesk-medium;
+    src: url("/fonts/spacegrotesk-medium.ttf");
+}
+@font-face {
+    font-family: spacegrotesk-semibold;
+    src: url("/fonts/spacegrotesk-semibold.ttf");
 }
 
 #contact{
     background-color: orange;
 }
 #home{
-    background-color: yellow;
+    background-image: url("/img/mobileHome.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    /* background-position: center center; */
 }
 #about{
-    background-color: greenyellow;
+    background-color: #B24018;
 }
 #foodMenu{
-    background-color: cornflowerblue;
+    background-color: #B05E3B;
 }
 #menu{
-    background-color: grey;
+    background-color: #C95D32;
+    font-family: spacegrotesk-variablefont_wght;
+    text-decoration: underline;
+    font-size: 14px;
 }
-/* FUEGO AERGENTINO */
-h1 {
-    font-size: medium;
+#haizea{
+    background-color: #B3CFD0;
+}
+
+/* HOME */
+.titulo {
+    font-family: spacegrotesk-variablefont_wght;
+    font-size: 14px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+a {
+    color: white;
+}
 a:link {
     text-decoration:none;
+    color: white;
 }
 
-/* a:visited {
-    color: black;
-} */
-
+main {
+    height: calc(100vh - 100%);
+    min-height: calc(100vh - 135px);
+}
 /****** navBar *****/
 .desktopBar {
     display: none;
+    height: 35px;
 }
 
 .desktop {
@@ -100,9 +141,6 @@ a:link {
 
 /* *************************** */
 
-.containerSinFooter {
-    min-height: calc(100vh - 100px - 100px);
-}
 
 .menu{
     list-style: none;
@@ -111,34 +149,46 @@ a:link {
     justify-content:space-between;
     text-align: center;
     min-height: 90%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
 }
 
 /* posiciono en el centro de la pagina */
 .centeredContainer {
+    font-family: spacegrotesk-variablefont_wght_2;
+    font-size: 12px;
     position:fixed;
     top: 50%;
+    bottom: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 /****** footer *****/
-
+/* me muestra las redes en contacto con .desktop en vez de .redes */
 .redes {
     visibility: hidden;
 }
 
 footer {
+    font-family: spacegrotesk-variablefont_wght;
+    font-size: 12px;
     position:fixed;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%; /****** ver cuanto conviene *****/
+    width: 100%; 
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: small;
-    margin-top: 20px;
+    /* margin-top: 50px; */
+    padding-top: 20px;
+    color: white;
+    height: 50px;
 }
+
 
 
 /****** scroll poesia Kun*****/
@@ -146,22 +196,24 @@ footer {
 /* Establecer posición inicial del texto y crear animacion*/
 #scrollText {
     position: absolute;
-    bottom: 0;
+    bottom: 130px; /*altura de comienzo*/
     padding: 10px;
-    animation: miAnimacion 20s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
+    padding-bottom: 0px;
+    animation: miAnimacion 25s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
+    font-family: spacegrotesk-variablefont_wght_1;
+    font-size: 12px;
 }
 
 .scrollContainer {
-    padding-top: 15px;
     padding-bottom: 15px;
     position: relative;
-	width: 100%;
-    min-height: calc(80vh - 100px - 100px);
+	/* width: 100%; */
+    height: calc(100vh - 100%);
+    min-height: calc(100vh - 135px);
+    max-width: 50%;
 	overflow: scroll;
-	margin: 0 auto;
-    overflow-x:hidden;
-    scrollbar-color: yellow #800080;
-    scrollbar-width: 10px;
+    overflow:hidden;
+    margin: 0 auto;
 }
 
 /* Crear animación */
@@ -181,15 +233,20 @@ footer {
     .mobile {
         display: none;
     }
+    .desktop {
+        display: flex;
+    }
+
+
+    #home{
+        background-image: url("/img/desktopHome.png");
+        background-repeat: no-repeat; 
+        background-size: cover; 
+    }
     
     .desktopBar {
         display:flex;
         justify-content: center;
-    }
-
-    .redes {
-        visibility: visible;
-        margin: 0 20px 0 20px;
     }
 
     .bottomfooter{
@@ -203,7 +260,9 @@ footer {
         justify-content: space-around;
     }
 
-    nav ul li {
+    header ul li {
+        font-family: spacegrotesk-variablefont_wght;
+        font-size: 12px;
         margin-left: 10px;
         margin-right: 10px;
     }
