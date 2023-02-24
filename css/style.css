@@ -4,16 +4,55 @@
     box-sizing: border-box;
 }
 
-body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	text-align: center;
+body{
+    font-family: spacegrotesk-variablefont_wght;
+    font-size: 12px;
     color: white;
-    /* border: 5px solid red; */
+    display: flex;
+    height: 100%;
     min-height: 100vh; 
-    padding: 1em;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
+/**** layout ****/
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+main {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+}
+
+footer {
+    font-family: spacegrotesk-variablefont_wght;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.desktop {
+    display:none;
+}
+
+.redes {
+    visibility: hidden;
+}
+
+
+/**** fonts ****/
 @font-face {
     font-family: spacegrotesk-variablefont_wght_1;
     src: url("/fonts/spacegrotesk-variablefont_wght_1.TTF");
@@ -35,38 +74,38 @@ body {
     src: url("/fonts/spacegrotesk-semibold.ttf");
 }
 
+/**** backgrounds ****/
 #contact{
     background-color: orange;
 }
+
 #home{
     background-image: url("/img/mobileHome.jpg");
     background-repeat: no-repeat; 
     background-size: cover; 
-    /* background-position: center center; */
+    /* background-position: center center;  */
 }
+
 #about{
     background-color: #B24018;
 }
+
 #foodMenu{
     background-color: #B05E3B;
 }
+
 #menu{
     background-color: #C95D32;
     font-family: spacegrotesk-variablefont_wght;
     text-decoration: underline;
     font-size: 14px;
 }
+
 #haizea{
     background-color: #B3CFD0;
 }
 
-/* HOME */
-.titulo {
-    font-family: spacegrotesk-variablefont_wght;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+/**** home ****/
 
 a {
     color: white;
@@ -76,33 +115,38 @@ a:link {
     color: white;
 }
 
-main {
-    height: calc(100vh - 100%);
-    min-height: calc(100vh - 135px);
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-/****** navBar *****/
+
+.logo {
+    width: 30px;
+    padding-top: 25px;
+
+}
+
+.hamburger {
+    position: fixed;
+    top:10px;
+    right: 20px;
+    width: 20px;
+    margin-bottom: 0px;
+}
+
+.logoname {
+    font-family: spacegrotesk-variablefont_wght;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .desktopBar {
     display: none;
     height: 35px;
-}
-
-.desktop {
-    display:none;
-}
-
-.navbar {
-    position: relative;
-    height: 50px;
-    padding-top: 10px;
-}
-
-.logoImg {
-    width: 30px;
-}
-
-.hambImg {
-    width: 20px;
-    margin-bottom: 0px;
 }
 
 .rotateImg {
@@ -111,36 +155,19 @@ main {
     margin-bottom: 10px;
 }
 
-.closeImg {
-    width: 30px;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.logo {
-    position: absolute;
-    left: calc(50% - 15px);
-}
-
-.hamburger {
-    position: absolute;
-    right:0%;
-}
-
 .rotate {
     display: flex;
     justify-content: center;
 }
 
+/**** menu ****/
+
 .close{
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    width: 30px;
+    position: fixed;
+    top:10px;
+    right: 20px;
 }
-
-/* *************************** */
-
 
 .menu{
     list-style: none;
@@ -154,66 +181,39 @@ main {
 
 }
 
-/* posiciono en el centro de la pagina */
-.centeredContainer {
-    font-family: spacegrotesk-variablefont_wght_2;
-    font-size: 12px;
+/**** aCercaDe y contacto ****/
+.mainSubContainer {
     position:fixed;
     top: 50%;
-    bottom: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-/****** footer *****/
-/* me muestra las redes en contacto con .desktop en vez de .redes */
-.redes {
-    visibility: hidden;
-}
+/****** scroll poesia *****/
 
-footer {
-    font-family: spacegrotesk-variablefont_wght;
-    font-size: 12px;
-    position:fixed;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: small;
-    /* margin-top: 50px; */
-    padding-top: 20px;
-    color: white;
-    height: 50px;
-}
-
-
-
-/****** scroll poesia Kun*****/
-
-/* Establecer posición inicial del texto y crear animacion*/
 #scrollText {
     position: absolute;
-    bottom: 130px; /*altura de comienzo*/
+    bottom: 0px; /*altura de comienzo con respecto a scrollcontainer*/
     padding: 10px;
     padding-bottom: 0px;
-    animation: miAnimacion 25s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
+    animation: miAnimacion 5s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
     font-family: spacegrotesk-variablefont_wght_1;
     font-size: 12px;
 }
 
 .scrollContainer {
-    padding-bottom: 15px;
-    position: relative;
-	/* width: 100%; */
-    height: calc(100vh - 100%);
-    min-height: calc(100vh - 135px);
-    max-width: 50%;
+    position: absolute;
+    top: 120px;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    max-width: 60%;
+    text-align: center;
 	overflow: scroll;
     overflow:hidden;
     margin: 0 auto;
+    
 }
 
 /* Crear animación */
@@ -227,7 +227,7 @@ footer {
 }
 
 
-/* *** desktop layout  *** */
+/**** desktop layout  ****/
 @media only screen and (min-width:480px) {
 
     .mobile {
@@ -237,22 +237,15 @@ footer {
         display: flex;
     }
 
-
     #home{
         background-image: url("/img/desktopHome.png");
         background-repeat: no-repeat; 
         background-size: cover; 
     }
-    
+
     .desktopBar {
         display:flex;
         justify-content: center;
-    }
-
-    .bottomfooter{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
     }
 
     .desktopBar ul {
@@ -266,13 +259,20 @@ footer {
         margin-left: 10px;
         margin-right: 10px;
     }
-
+    
     .barmenu{
         margin-bottom: 20px;
         list-style: none;
         display: flex;
         flex-direction: column;
     }
+
+    .bottomfooter{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
     
 }
 
