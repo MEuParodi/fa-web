@@ -192,14 +192,40 @@ a:link {
 
 /****** scroll poesia *****/
 
-#scrollText {
+#textMenu {
     position: absolute;
-    bottom: 0px; /*altura de comienzo con respecto a scrollcontainer*/
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    animation: moveText 8s linear infinite;
     padding: 10px;
     padding-bottom: 0px;
-    animation: miAnimacion 5s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
     font-family: spacegrotesk-variablefont_wght_1;
     font-size: 12px;
+    webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+#textMenu.paused {
+    animation-play-state: paused;
+
+    transition: none !important;
+    /* detiene cualquier transición de animación */
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+  }
+
+#textMenu.dragging {
+  transition: none;
+}
+
+/* Crear animación */
+@keyframes moveText {
+    from { bottom: -100%; }
+  to { bottom: 100%; }
 }
 
 .scrollContainer {
@@ -216,15 +242,7 @@ a:link {
     
 }
 
-/* Crear animación */
-@keyframes miAnimacion {
-    from {
-        transform: translateY(90%);
-    }
-    to {
-        transform: translateY(-70%);
-    }
-}
+
 
 
 /**** desktop layout  ****/
