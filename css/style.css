@@ -4,9 +4,32 @@
     box-sizing: border-box;
 }
 
+/**** fonts ****/
+@font-face {
+    font-family: SpaceGrotesk-Light;
+    src: url("/fonts/SpaceGrotesk-Light.ttf");
+}
+@font-face {
+    font-family: SpaceGrotesk-Medium;
+    src: url("/fonts/SpaceGrotesk-Medium.ttf");
+}
+@font-face {
+    font-family: SpaceGrotesk-Regular;
+    src: url("/fonts/SpaceGrotesk-Regular.ttf");
+}
+@font-face {
+    font-family: SpaceGrotesk-SemiBold;
+    src: url("/fonts/SpaceGrotesk-SemiBold.ttf");
+}
+@font-face {
+    font-family: SpaceGrotesk-Bold;
+    src: url("/fonts/SpaceGrotesk-Bold.TTF");
+}
+
+
 body{
-    font-family: spacegrotesk-variablefont_wght;
-    font-size: 12px;
+    font-family: SpaceGrotesk-Regular;
+    font-size: 14px;
     color: white;
     display: flex;
     height: 100%;
@@ -20,27 +43,29 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 120px;
+    border: solid 5px red;
 }
 
 main {
     position: absolute;
-    top: 100px;
+    top: 120px;
     bottom: 100px;
     left: 0;
     right: 0;
+    border: solid 5px green;
+
 }
 
 footer {
-    font-family: spacegrotesk-variablefont_wght;
-    font-size: 12px;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     right: 0;
     height: 100px;
     text-align: center;
     margin: 0 auto;
+    border: solid 5px blue;
 }
 
 .desktop {
@@ -51,28 +76,6 @@ footer {
     visibility: hidden;
 }
 
-
-/**** fonts ****/
-@font-face {
-    font-family: spacegrotesk-variablefont_wght_1;
-    src: url("/fonts/spacegrotesk-variablefont_wght_1.TTF");
-}
-@font-face {
-    font-family: spacegrotesk-variablefont_wght_2;
-    src: url("/fonts/spacegrotesk-variablefont_wght_2.ttf");
-}
-@font-face {
-    font-family: spacegrotesk-variablefont_wght;
-    src: url("/fonts/spacegrotesk-variablefont_wght.ttf");
-}
-@font-face {
-    font-family: spacegrotesk-medium;
-    src: url("/fonts/spacegrotesk-medium.ttf");
-}
-@font-face {
-    font-family: spacegrotesk-semibold;
-    src: url("/fonts/spacegrotesk-semibold.ttf");
-}
 
 /**** backgrounds ****/
 #contact{
@@ -96,9 +99,7 @@ footer {
 
 #menu{
     background-color: #C95D32;
-    font-family: spacegrotesk-variablefont_wght;
     text-decoration: underline;
-    font-size: 14px;
 }
 
 #haizea{
@@ -123,8 +124,8 @@ a:link {
 }
 
 .logo {
-    width: 30px;
-    padding-top: 25px;
+    width: 140px;
+    padding-top: 5px;
 
 }
 
@@ -137,8 +138,8 @@ a:link {
 }
 
 .logoname {
-    font-family: spacegrotesk-variablefont_wght;
-    font-size: 14px;
+    /* font-family: spacegrotesk-variablefont_wght;
+    font-size: 14px; */
     margin-top: 2px;
     margin-bottom: 20px;
     text-align: center;
@@ -151,7 +152,7 @@ a:link {
 
 .rotateImg {
     width: 30px;
-    margin-bottom: 0px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
@@ -170,15 +171,20 @@ a:link {
 }
 
 .menu{
+    height: 100%;
     list-style: none;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     text-align: center;
-    min-height: 90%;
+
+}
+
+#mainMenu{
+    top:25px;
+    bottom:25px;
     padding-top: 20px;
     padding-bottom: 20px;
-
 }
 
 /**** aCercaDe y contacto ****/
@@ -197,18 +203,16 @@ a:link {
     bottom: 0px; /*altura de comienzo con respecto a scrollcontainer*/
     padding: 10px;
     padding-bottom: 0px;
-    animation: miAnimacion 5s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
-    font-family: spacegrotesk-variablefont_wght_1;
-    font-size: 12px;
+    animation: miAnimacion 25s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
 }
 
 .scrollContainer {
     position: absolute;
-    top: 120px;
-    bottom: 120px;
+    top: 70px;
+    bottom: 70px;
     left: 0;
     right: 0;
-    max-width: 60%;
+    max-width: 80%;
     text-align: center;
 	overflow: scroll;
     overflow:hidden;
@@ -254,12 +258,18 @@ a:link {
     }
 
     header ul li {
-        font-family: spacegrotesk-variablefont_wght;
-        font-size: 12px;
         margin-left: 10px;
         margin-right: 10px;
     }
-    
+
+    footer {
+        height: 70px;
+    }
+
+    main {
+        bottom: 70px;
+    }
+        
     .barmenu{
         margin-bottom: 20px;
         list-style: none;
