@@ -1,42 +1,36 @@
-// Obtener el elemento del texto
-var miTexto = document.getElementById("miTexto");
-
-// Variables para almacenar la posición del mouse
-var mouseX;
-var mouseY;
-
-// Agregar eventos al elemento del texto
-miTexto.addEventListener("mousedown", function(e) {
-      miTexto.style.animationPlayState = "paused";
-
-    // Obtener la posición del mouse
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    // Agregar evento de movimiento de mouse
-    document.addEventListener("mousemove", moverTexto);
-});
-
-document.addEventListener("mouseup", function() {
-    // Reanudar la animación
-    miTexto.style.animationPlayState = "running";
-
-    document.removeEventListener("mousemove", moverTexto);
-});
-
-// Función para mover el texto
-function moverTexto(e) {
-    // Calcular la diferencia de posición del mouse
-  console.log("mouse down")
-
-    // var diferenciaX = e.clientX - mouseX;
-    var diferenciaY = e.clientY - mouseY;
-
-    // Aplicar la diferencia de posición al elemento del texto
-    miTexto.style.transform = "translateY(" + diferenciaY + "px)";
+var textMenu = document.getElementById("textMenu");
+var isDragging = false;
+var textContainer = document.getElementById("scrollContainer");
+let containerTop = 0;
+function pauseAnimation() {
+  // Pausa la animación cuando se hace clic en el texto
 }
-
-// Agregar evento de soltado de mouse
-document.addEventListener("mouseup", function() {
-    document.removeEventListener("mousemove", moverTexto);
-});
+function startDrag(event) {
+  // Comienza a arrastrar el texto cuando se presiona el botón del mouse
+  textMenu.classList.add("paused");
+  isDragging = true;
+  textMenu.classList.add("dragging");
+  const containerRect = textContainer.getBoundingClientRect();
+  containerTop = containerRect.top + window.scrollY;
+  const textMenuRect = textMenu.getBoundingClientRect();
+  textMenuTop = textMenuRect.top + window.scrollY - containerTop - textMenu.offsetHeight;
+  clickOffset = event.clientY - textMenuRect.top;
+}
+function stopDrag() {
+  // Detiene el arrastre del texto cuando se suelta el botón del mouse
+  textMenu.classList.remove("paused");
+  isDragging = false;
+  textMenu.classList.remove("dragging");
+}
+function moveText(event) {
+  // Mueve el texto mientras se arrastra con el botón del mouse presionado
+  if (isDragging) {
+    const y = event.clientY - containerTop;
+    const newY = y - textMenuTop + clickOffset;
+    textMenu.style.transform = `translateY(${newY -400}px)`;
+  }
+}
+//textMenu.addEventListener("click", pauseAnimation);
+textMenu.addEventListener("mousedown", startDrag);
+document.addEventListener("mouseup", stopDrag);
+document.addEventListener("mousemove", moveText);

@@ -44,7 +44,6 @@ header {
     left: 0;
     right: 0;
     height: 120px;
-    border: solid 5px red;
 }
 
 main {
@@ -53,19 +52,16 @@ main {
     bottom: 100px;
     left: 0;
     right: 0;
-    border: solid 5px green;
-
 }
 
 footer {
     position: absolute;
-    bottom: 5px;
+    bottom: 7px;
     left: 0;
     right: 0;
     height: 100px;
     text-align: center;
     margin: 0 auto;
-    border: solid 5px blue;
 }
 
 .desktop {
@@ -125,21 +121,19 @@ a:link {
 
 .logo {
     width: 140px;
-    padding-top: 5px;
+    padding-top: 7px;
 
 }
 
 .hamburger {
     position: fixed;
     top:10px;
-    right: 20px;
-    width: 20px;
+    right: 25px;
+    width: 25px;
     margin-bottom: 0px;
 }
 
 .logoname {
-    /* font-family: spacegrotesk-variablefont_wght;
-    font-size: 14px; */
     margin-top: 2px;
     margin-bottom: 20px;
     text-align: center;
@@ -173,6 +167,7 @@ a:link {
 .menu{
     height: 100%;
     list-style: none;
+    text-decoration: underline;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
@@ -181,13 +176,13 @@ a:link {
 }
 
 #mainMenu{
-    top:25px;
-    bottom:25px;
+    top:50px;
+    bottom:50px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-/**** aCercaDe y contacto ****/
+/**** contacto ****/
 .mainSubContainer {
     position:fixed;
     top: 50%;
@@ -196,13 +191,60 @@ a:link {
     text-align: center;
 }
 
-/****** scroll poesia *****/
-
-#scrollText {
+/****** scroll text *****/
+#textMenu {
     position: absolute;
-    bottom: 0px; /*altura de comienzo con respecto a scrollcontainer*/
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    animation: moveText 8s linear infinite;
     padding: 10px;
     padding-bottom: 0px;
+    font-family: spacegrotesk-variablefont_wght_1;
+    font-size: 12px;
+    webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+#textMenu.paused {
+    animation-play-state: paused;
+    transition: none !important;
+    /* detiene cualquier transición de animación */
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+  }
+#textMenu.dragging {
+  transition: none;
+}
+/* Crear animación */
+@keyframes moveText {
+    from { bottom: -100%; }
+  to { bottom: 100%; }
+}
+.scrollContainer {
+    position: absolute;
+    top: 120px;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    max-width: 60%;
+    text-align: center;
+    overflow: scroll;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* animacion Kun vieja **
+#scrollText {
+    position: absolute;
+    bottom: 0px; 
+    padding: 10px 10px 0px 10px;
+    margin:0 auto;
     animation: miAnimacion 25s cubic-bezier(0.71, 0.21, 1, 1.02) infinite;
 }
 
@@ -215,10 +257,9 @@ a:link {
     max-width: 80%;
     text-align: center;
 	overflow: scroll;
-    overflow:hidden;
+    overflow-x:hidden;
     margin: 0 auto;
-    
-}
+} */
 
 /* Crear animación */
 @keyframes miAnimacion {
