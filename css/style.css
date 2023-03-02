@@ -226,25 +226,10 @@ a:link {
     from { bottom: -120%; }
     to { bottom: 100%; }
 }
-.scrollContainer {
-    /* position: absolute;
-    top: 120px;
-    bottom: 120px;
-    left: 0;
-    right: 0; */
-    position:relative;
-    max-width: 80%;
-    height: 70vh;
-    text-align: center;
-    overflow: scroll;
-    overflow:hidden;
-    margin: 0 auto;
-}
-
 
 /* Crear animación */
 @keyframes moveText {
-    from { bottom: -120%; }
+    from { bottom: -200%; }
     to { bottom: 100%; }
 }
 
@@ -253,8 +238,7 @@ a:link {
     max-width: 80%;
     height: 58vh;
     text-align: center;
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 15px auto;
 }
 
