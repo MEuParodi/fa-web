@@ -251,11 +251,11 @@ a:link {
 .scrollContainer {
     position: relative;
     max-width: 80%;
-    height: 70vh;
+    height: 58vh;
     text-align: center;
-	overflow: scroll;
-    overflow-x:hidden;
-    margin: 0 auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 15px auto;
 }
 
 
