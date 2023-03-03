@@ -29,9 +29,12 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-closeButton.addEventListener('click', function(event) { 
-    closeVideo()
-});
+if (closeButton){
+    closeButton.addEventListener('click', function(event) { 
+        closeVideo()
+    });
+}
+
 
 scrollContainer1.addEventListener('click', function(event) { 
     player.seekTo(0);
