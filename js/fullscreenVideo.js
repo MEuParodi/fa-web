@@ -1,7 +1,7 @@
 var player;
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    videoId: 'H1gn4K4qfBU',
+    videoId: 'qfGjEa0Vtcg',
     playerVars: {
         'autoplay':1,
         'controls':0,
@@ -13,21 +13,22 @@ function onYouTubeIframeAPIReady() {
         'loop':1,
         'disablekb':1,
         'playsinline':1,
+        'mute':0,
     }
-
-
   });
 }
 
 const closeButton  = document.getElementById('buttonClose');
 const scrollContainer1  = document.getElementById('scrollContainer');
 const fullscreen = document.getElementById('fullscreen');
+const header = document.getElementById('header');
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeVideo()
     }
 });
+
 
 if (closeButton){
     closeButton.addEventListener('click', function(event) { 
@@ -37,12 +38,15 @@ if (closeButton){
 
 
 scrollContainer1.addEventListener('click', function(event) { 
-    player.seekTo(0);
+    // player.seekTo(0);
     player.playVideo();  
     fullscreen.classList.toggle('show');
+    header.classList.add('noShow');
+
 });
 
 function closeVideo() {
     player.stopVideo();
     fullscreen.classList.remove('show');
+    header.classList.remove('noShow');
 }
