@@ -1,3 +1,7 @@
+
+//este script da efectos al texto con el movimiento del mouse
+
+
 const scrollContainer = document.getElementById('scrollContainer');
 const textMenu = document.getElementById('textMenu');
 
