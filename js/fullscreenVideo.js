@@ -38,7 +38,6 @@ if (closeButton){
 
 
 scrollContainer1.addEventListener('click', function(event) { 
-    // player.seekTo(0);
     player.playVideo();  
     fullscreen.classList.toggle('show');
     header.classList.add('noShow');
