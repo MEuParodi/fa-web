@@ -80,7 +80,7 @@ footer {
 
 /**** backgrounds ****/
 #contact{
-    background-color: orange;
+    background-color: #B24018;
 }
 
 #home{
@@ -167,7 +167,7 @@ a:link {
     position: fixed;
     top:10px;
     right: 20px;
-    /* z-index:40; */
+    z-index:40;
 }
 
 .menu{
@@ -196,8 +196,6 @@ a:link {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
-
 
 .fullscreen {
     display: none;
@@ -239,7 +237,6 @@ a:link {
     animation: moveText 40s linear infinite;
     padding: 10px;
     padding-bottom: 0px;
-    /* font-family: spacegrotesk-variablefont_wght_1; */
     font-size: 12px;
     webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
@@ -264,13 +261,18 @@ a:link {
     display: flex;
     justify-content: center;
     max-width: 80%;
-    height: 58vh;
+    height: 60vh;
     text-align: center;
     overflow: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     margin: 15px auto;
 }
 
+.scrollContainer video{
+    height: 100%;
+}
+
+/* formato de la barra de scroll */
 .scrollContainer::-webkit-scrollbar {
   width: 2px;
 }
