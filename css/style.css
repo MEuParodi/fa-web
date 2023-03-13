@@ -217,14 +217,11 @@ a:link {
     display: inherit;
 }
 
-
-
 /* Crear animación */
 @keyframes moveText {
     from { bottom: -260%; }
     to { bottom: 100%; }
 }
-
 
 /****** scroll text *****/
 #textMenu {
@@ -261,7 +258,7 @@ a:link {
     display: flex;
     justify-content: center;
     max-width: 80%;
-    height: 60vh;
+    height: calc(100vh - 260px);
     text-align: center;
     overflow: hidden;
     /* overflow-y: scroll; */
@@ -346,6 +343,9 @@ a:link {
         to { bottom: 100%; }
     }
 
+    .scrollContainer {
+        height: calc(100vh - 240px);
+    }
     
 }
 
