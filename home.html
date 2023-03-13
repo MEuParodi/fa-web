@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=robots content="index,follow">   
+
+    <meta name="description" content="Somos Fuego Argentino, una conjunción de cultura vasca y Argentina.">
+    <meta name="keywords" content="Restaurant, Asado, Fuego, Argentino, Carnes, Carne asada">
+    <meta name="author" content="WebPlayedSolutions - www.webplayedsolutions.com">
+    <link rel="canonical" href="https://fuegoargentinobakio.com">
+    <meta name='url' content='https://fuegoargentinobakio.com'>
+    <meta http-equiv='Expires' content='0'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta http-equiv='imagetoolbar' content='no'>
+    <meta http-equiv='x-dns-prefetch-control' content='off'> 
+
+    <meta property="og:title" content="Fuego Argentino">
+    <meta property="og:site_name" content="Fuego Argentino">
+    <meta property="og:description" content="Somos Fuego Argentino, una conjunción de cultura vasca y Argentina.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fuegoargentinobakio.com">
+    <meta property="og:image" content="https://fuegoargentinobakio.com/img/FA_LogoMasLetras.png">
+
+
     <title>Fuego Argentino</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -32,15 +53,16 @@
 
     <main>
         <a href="./videoFullScrn.html">
-    
+        <!-- pondo el audio antes para que ande el video en mute 
+        hasta que el usuario interactúe con la pg-->
             <div id="scrollContainer" class="scrollContainer">
-                    <video autoplay playsinline loop muted>
-                        <source src="./videos/FA_CAP_06_15s.mp4" type="video/mp4">
-                    </video>
-                    <audio autoplay loop>
-                        <source src="./videos/audio.mp3" type="audio/mp3">
-                        <!-- Tu navegador no soporta la etiqueta de audio. -->
-                    </audio>
+                <audio autoplay loop>
+                    <source src="./videos/audio.mp3"></source>
+                </audio>
+        
+                <video autoplay playsinline loop muted>
+                    <source src="./videos/FA_CAP_06_15s.mp4" type="video/mp4">
+                </video>
                 <div id="textMenu">
                     <p>Como buen mago, </p>
                     <p>el asador prepara el espectáculo</p>
@@ -100,7 +122,7 @@
                     <p>y que el fuego nunca se apague. </p>
                 </div>
             </div>
-    
+        
         </a>
     
     
@@ -127,8 +149,6 @@
             </div>
         </div>
     </footer>
-    <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
-    <!-- <script type="text/javascript" src="js/fullscreenVideo.js"></script> -->
     <script type="text/javascript" src="js/videoHome.js"></script>
 
 </body>
