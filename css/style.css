@@ -32,19 +32,22 @@ body{
     font-size: 14px;
     color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    min-height: 100vh; 
-    /* overflow-y: hidden; */
+    min-height: 100vh;
+    /* border: solid 2px red; */
 }
 
 /**** layout ****/
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100px;
+    /* border: solid 2px blue; */
+}
+
+#home header {
     height: 120px;
-    z-index: 20;
 }
 
 header.noShow {
@@ -52,21 +55,21 @@ header.noShow {
 }
 
 main {
-    position: absolute;
-    top: 120px;
-    bottom: 100px;
-    left: 0;
-    right: 0;
+    height: calc(100vh - 210px);
+    /* border: solid 2px yellow; */
+}
+
+#home main {
+    height: calc(100vh - 230px);
 }
 
 footer {
-    position: absolute;
-    bottom: 7px;
-    left: 0;
-    right: 0;
     height: 100px;
     text-align: center;
     margin: 0 auto;
+    /* border: solid 2px blue; */
+    width: 100%;
+
 }
 
 .desktop {
@@ -182,10 +185,7 @@ a:link {
 }
 
 #mainMenu{
-    top:50px;
-    bottom:50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    height: 80%;
 }
 
 /**** contacto ****/
@@ -258,15 +258,22 @@ a:link {
     display: flex;
     justify-content: center;
     max-width: 80%;
-    height: calc(100vh - 260px);
+    /* height: calc(100vh - 210px); */
+    height: 80%;
     text-align: center;
     overflow: hidden;
     /* overflow-y: scroll; */
-    margin: 15px auto;
+    margin: 25px auto;
+}
+
+#home .scrollContainer {
+    /* height: calc(100vh - 260px); */
+    height: 80%;
 }
 
 .scrollContainer video{
     height: 100%;
+    margin: 0;
 }
 
 /* formato de la barra de scroll */
@@ -300,8 +307,8 @@ a:link {
         background-repeat: no-repeat; 
         background-size: cover; 
     }
-
-    .desktopBar {
+   
+       .desktopBar {
         display:flex;
         justify-content: center;
     }
@@ -311,18 +318,27 @@ a:link {
         justify-content: space-around;
     }
 
+    #home header {
+        height: 100px;
+    }
+
     header ul li {
         margin-left: 10px;
         margin-right: 10px;
     }
 
     footer {
-        height: 70px;
+        height: 80px;
     }
 
     main {
-        bottom: 70px;
+        height: calc(100vh - 200px);
     }
+
+    #home main {
+        height: calc(100vh - 200px);
+    }
+    
         
     .barmenu{
         margin-bottom: 20px;
@@ -335,6 +351,7 @@ a:link {
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
+        padding: 5px;
     }
 
     /* Crear animación */
@@ -344,7 +361,9 @@ a:link {
     }
 
     .scrollContainer {
-        height: calc(100vh - 240px);
+        /* height: calc(100vh - 240px); */
+        margin: 25px auto;
+        height: 80%;
     }
     
 }
