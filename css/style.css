@@ -143,9 +143,33 @@ a:link {
 }
 
 /**** menu ****/
+.sliderMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: all 0.3s ease-in-out;
+}
+
+.sliderMenu.active {
+    left: 0;
+  }
+
+  img#cierre {
+    width: 25px;
+    position: relative;
+    top: 7px;
+    right: -89vw;
+    z-index: 40;
+    cursor: pointer;
+}
+
+
 .close{
     width: 25px;
-    position: fixed;
+    position: relative;
     top: 20px;
     right: 20px;
     z-index: 40;
