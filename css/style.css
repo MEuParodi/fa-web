@@ -99,6 +99,8 @@ a {
     color: #DAD5CF;
 }
 a:link {
+    z-index: 99;
+    position: relative;
     text-decoration:none;
     color: #DAD5CF;
 }
