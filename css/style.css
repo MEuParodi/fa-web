@@ -98,6 +98,11 @@ header.noShow {
 a {
     color: #DAD5CF;
 }
+a:hover {
+    color: #eeeeee;
+    transition: color 1s;
+}
+
 a:link {
     z-index: 99;
     position: relative;
