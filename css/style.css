@@ -32,8 +32,9 @@ body{
     font-size: 14px;
     color: #DAD5CF;
     display: block;
-   /* height: 100%;*/
-    /*max-height: 100vh;*/
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
 header {
@@ -156,12 +157,12 @@ a:link {
 
 .sliderMenu.active {
     left: 0;
-  }
+}
 
-  img#cierre {
+img#cierre {
     width: 25px;
     position: relative;
-    top: 7px;
+    top: 14px;
     right: -89vw;
     z-index: 40;
     cursor: pointer;
@@ -219,21 +220,23 @@ a:link {
     display: inherit;
 }
 
-/* Crear animación */
+/* Animación de textos tipo cine */
 @keyframes moveText {
-    from { bottom: -260%; }
-    to { bottom: 100%; }
+    from { top: 100%; }
+    to { top: -250%; }
 }
 
 /****** scroll text *****/
 #textMenu {
     position: absolute;
-    bottom: 0;
+    bottom: -100%;
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
-    animation: moveText 40s linear infinite;
+    animation-name: moveText;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     padding: 10px;
     padding-bottom: 0px;
     font-size: 12px;
@@ -255,6 +258,17 @@ a:link {
   transition: none;
 }
 
+
+.moveTextAbout {
+    animation-duration: 60s;
+}
+.moveTextHome {
+    animation-duration: 60s;
+}
+.moveTextMenu {
+    animation-duration: 60s;
+}
+
 .scrollContainer {
     position: relative;
     display: flex;
@@ -262,7 +276,7 @@ a:link {
     max-width: 100%;
     text-align: center;
     overflow: hidden;
-    height: calc(100vh - 300px); 
+    height: 100%; 
 }
 
 
@@ -301,6 +315,21 @@ a:link {
 
 @media only screen and (min-width:480px) {
 
+    /****** scroll text *****/
+    .moveTextAbout {
+        animation-duration: 40s;
+    }
+    .moveTextHome {
+        animation-duration: 40s;
+    }
+    .moveTextMenu {
+        animation-duration: 40s;
+    }
+    @keyframes moveText {
+        from { top: 100%; }
+        to { top: -280%; }
+    }
+    
     .mobile {
         display: none;
     }
@@ -342,15 +371,10 @@ a:link {
         padding: 5px;
     }
 
-    /* Crear animación */
-    @keyframes moveText {
-        from { bottom: -190%; }
-        to { bottom: 100%; }
-    }
 
     .scrollContainer {
         margin: 25px auto;
-        height: 80%;
+        height: 100%;
     }
     
 }
@@ -365,11 +389,22 @@ a:link {
 
 
 
-  @media only screen and (max-width: 480px) and (max-height: 800px) and (-webkit-device-pixel-ratio: 2) {
+  @media only screen and (max-width: 480px) and (max-height: 800px) {
     body {
       height: calc(100vh - 64px); /* Resta la altura de la barra de navegación en algunos dispositivos Samsung */
     }
   }
+
+  @media only screen and (max-width: 375px) {
+    body {
+      height: calc(100vh - 83px); /* Resta la altura de la barra de navegación en iPhone X y modelos posteriores */
+    }
+    @keyframes moveText {
+        from { top: 100%; }
+        to { top: -280%; }
+    }
+  }
+  
   
   @media only screen and (max-width: 375px) and (max-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     body {
