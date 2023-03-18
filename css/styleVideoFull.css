@@ -35,24 +35,6 @@ video.fullscreen {
     transform: translate(-50%, -50%);
 }
 
-/* &::-webkit-media-controls {
-    display: none !important;
-} */
-
-
-
-/* .closeX {
-  text-decoration:none;
-  color:white;
-  position:fixed;
-  top: 20px;
-  right: 20px;
-  z-index:10;
-  border-radius: 50%;
-  cursor: pointer;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: large;
-} */
 
 
 
