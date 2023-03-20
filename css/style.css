@@ -45,6 +45,7 @@ header {
 main {
      padding: 14px 28px 50px 28px;
      height: calc(100vh - 260px); 
+
 }
 
 footer {
@@ -54,6 +55,7 @@ footer {
     width: 100%;
     bottom: 0;
     position: fixed;
+
 }
 
 header.noShow {
@@ -370,14 +372,60 @@ img#cierre {
         align-items: flex-end;
         padding: 5px;
     }
-
-
-    .scrollContainer {
-        margin: 25px auto;
-        height: 100%;
-    }
-    
+   
 }
+
+@media only screen and (min-width: 2000px) and (max-width: 3000px) {
+    body {
+        font-size: 24px;
+    }    
+    header {
+        height: 180px;
+    }
+    footer {
+        height: 130px;
+    }
+
+    main {
+        height: calc(100vh - 310px); 
+    }
+
+    #textMenu {
+        font-size: 24px;
+    }
+
+    .logo {
+        width: 225px;
+        padding-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 3001px)  {
+    body {
+        font-size: 30px;
+    }    
+    header {
+        height: 240px;
+    }
+    footer {
+        height: 160px;
+    }
+
+    main {
+        height: calc(100vh - 400px); 
+    }
+
+    #textMenu {
+        font-size: 30px;
+    }
+
+    .logo {
+        width: 300px;
+        padding-top: 2rem;
+    }
+}
+
+
 
 @media only screen and (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
     /* Estilos para dispositivos móviles en orientación horizontal */
