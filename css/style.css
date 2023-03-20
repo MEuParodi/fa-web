@@ -45,6 +45,7 @@ header {
 main {
      padding: 14px 28px 50px 28px;
      height: calc(100vh - 260px); 
+
 }
 
 footer {
@@ -54,6 +55,7 @@ footer {
     width: 100%;
     bottom: 0;
     position: fixed;
+
 }
 
 header.noShow {
